@@ -1,11 +1,11 @@
-JS Period 2 handIn
+# JS Period 2 handIn
 
 
 ## Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomcat
 
-(y) ## xplain the difference between Debug outputs and ApplicationLogging. What’s wrong with console.log(..) statements in our backend code.
+## (y) Explain the difference between Debug outputs and ApplicationLogging. What’s wrong with console.log(..) statements in our backend code.
 
-(y) ## Demonstrate a system using application logging and environment controlled debug statements.
+## (y) Demonstrate a system using application logging and environment controlled debug statements.
 
 ## Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript/Typescript + relevant packages 
 
@@ -33,7 +33,7 @@ JS Period 2 handIn
 
 ## Explain, generally, what is meant by a NoSQL database.
 
-(y) ## Explain Pros & Cons in using a NoSQL database like MongoDB as your data store, compared to a traditional Relational SQL Database ## like MySQL.
+## (y) Explain Pros & Cons in using a NoSQL database like MongoDB as your data store, compared to a traditional Relational SQL Database ## like MySQL.
 
 ## Explain about indexes in MongoDB, how to create them, and demonstrate how you have used them.
 
@@ -43,16 +43,16 @@ JS Period 2 handIn
 
 ## Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the ## production ##database)
 
-(r) ## Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization
+## (r) Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization
 
 ## Geo-location and Geojson
 
 
 ## Explain and demonstrate basic Geo-JSON, involving as a minimum, Points and Polygons
 
-(y) ## Explain and demonstrate ways to create Geo-JSON test data
+## (y) Explain and demonstrate ways to create Geo-JSON test data
 
-(y) ##  Explain the typical order of longitude and latitude used by Server-Side API’s and Client-Side API’s
+## (y) Explain the typical order of longitude and latitude used by Server-Side API’s and Client-Side API’s
 
 ## Explain and demonstrate a REST API that implements geo-features, using a relevant geo-library and plain JavaScript
 
