@@ -26,8 +26,7 @@
 
 ## Explain, using relevant examples, your strategy for implementing a REST-API with Node/Express  + TypeScript and demonstrate how you ## have tested the API.
 
-## Explain, using relevant examples, how to test JavaScript/Typescript Backend Code, relevant packages (Mocha, Chai etc.) and how to test 
-## asynchronous code.
+## Explain, using relevant examples, how to test JavaScript/Typescript Backend Code, relevant packages (Mocha, Chai etc.) and how to test asynchronous code.
 
 ## NoSQL and MongoDB 
 
