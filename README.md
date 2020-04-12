@@ -1,7 +1,7 @@
 JS Period 2 handIn
 
 
-##Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomcat
+## Explain Pros & Cons in using Node.js + Express to implement your Backend compared to a strategy using, for example, Java/JAX-RS/Tomcat
 
 (y)##Explain the difference between Debug outputs and ApplicationLogging. What’s wrong with console.log(..) statements in our backend code.
 
