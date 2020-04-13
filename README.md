@@ -29,6 +29,8 @@ we use .env file a bcrypt hashing in our prject for security. for debugging we c
 (        
 ## Explain, preferably using an example, how you have deployed your node/Express applications, and which of the Express Production best ## practices you have followed.
 
+Node installeret på droplet.
+
 ## Explain possible steps to deploy many node/Express servers on the same droplet, how to deploy the code and how to ensure servers will ## continue to operate, even after a droplet restart.
 
 ## Explain, your chosen strategy to deploy a Node/Express application including how to solve the following deployment problems:
