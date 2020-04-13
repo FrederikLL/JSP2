@@ -21,6 +21,8 @@ For testing in our project we use Mocha/Chai. The testing uses before/beforeEach
 
 ## Explain a setup for Express/Node/Test/Mongo-DB development with Typescript, and how it handles "secret values", debug and testing.
 
+we use .env file a bcrypt hashing in our prject for security. for debugging we can run with dev watch (nodemon)to see any changes while we develop. testing is done with mochai.
+
 (        
 ## Explain, preferably using an example, how you have deployed your node/Express applications, and which of the Express Production best ## practices you have followed.
 
@@ -75,7 +77,9 @@ wd use TTL for delete old location data. We use 2dsphere for geospatial queries 
 
 
 
-## Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the ## production ##database)
+## Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the production database)
+
+see project
 
 ## (r) Demonstrate, using your own code-samples, decisions you have made regarding → normalization vs denormalization
 
@@ -93,11 +97,15 @@ we use points for userlocation and polygons for "proximity". with that we check 
 
 ## (y) Explain and demonstrate ways to create Geo-JSON test data
 
+
+
 ## (y) Explain the typical order of longitude and latitude used by Server-Side API’s and Client-Side API’s
 
 x-y axis rule for remembering when working with the logic, other way around for map software
 
 ## Explain and demonstrate a REST API that implements geo-features, using a relevant geo-library and plain JavaScript
+
+GeoJSON is what we use for working with coordinates and polygons and so on. The geo Ocjets stores for example locations that we save. with these locations we can play our game to see if a userlocation matches up with our point location (or if it is in proximity).
 
 ## Explain and demonstrate a REST API that implements geo-features, using Mongodb’s geospatial queries and indexes.
 
