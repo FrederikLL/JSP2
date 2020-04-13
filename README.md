@@ -13,6 +13,9 @@ cpu intenive apps dont work well with node(video,audio editing programs)
 
 ## (y) Explain the difference between Debug outputs and ApplicationLogging. What’s wrong with console.log(..) statements in our backend code.
 
+we generally want to develop our program with the dev:Watch nodemon command as it automaticly detects changes and restarts server so wer dont have to do it manually
+console.log() forces you to consciously select which information to be logged prior to debugging
+
 ## (y) Demonstrate a system using application logging and environment controlled debug statements.
 
 ## Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript/Typescript + relevant packages
