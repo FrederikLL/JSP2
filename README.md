@@ -32,9 +32,12 @@ we use .env file a bcrypt hashing in our prject for security. for debugging we c
 
 Node installeret på droplet.
 
-## Explain possible steps to deploy many node/Express servers on the same droplet, how to deploy the code and how to ensure servers will ## continue to operate, even after a droplet restart.
+## Explain possible steps to deploy many node/Express servers on the same droplet, how to deploy the code and how to ensure servers will  continue to operate, even after a droplet restart.
+
+pm2 tool on the droplet
 
 ## Explain, your chosen strategy to deploy a Node/Express application including how to solve the following deployment problems:
+I kept the same droplet as last semester. The url i gave this project those is different and iv'e disabled tomcat from the "expressdemos" hostname. This way i dont need to pay for 2 droplets while keeping my old websites.
 ## - Ensure that you Node-process restarts after a (potential) exception that closed the application
 ## - Ensure that you Node-process restarts after a server (Ubuntu) restart
 ## - Ensure that you can run “many” node-applications on a single droplet on the same port (80)
