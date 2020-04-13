@@ -54,9 +54,9 @@ describe("Verify the GameFacade", () => {
     const positions = [
       positionCreator(12.48, 55.77, team1.userName, team1.name, true),
       //TODO --> Change latitude below, to a value INSIDE the radius given by DISTANCE_TO_SEARC, and the position of team1
-      positionCreator(12.48, 55.77, team2.userName, team2.name, true),
+      positionCreator(12.48, getLatitudeInside(55.77,DISTANCE_TO_SEARCH), team2.userName, team2.name, true),
       //TODO --> Change latitude below, to a value OUTSIDE the radius given by DISTANCE_TO_SEARC, and the position of team1
-      positionCreator(12.48, 55.77, team3.userName, team3.name, true),
+      positionCreator(12.48, getLatitudeOutside(55.77,DISTANCE_TO_SEARCH), team3.userName, team3.name, true),
     ]
     await positionCollection.insertMany(positions)
 
