@@ -15,7 +15,9 @@ cpu intenive apps dont work well with node(video,audio editing programs)
 
 ## (y) Demonstrate a system using application logging and environment controlled debug statements.
 
-## Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript/Typescript + relevant packages 
+## Explain, using relevant examples, concepts related to testing a REST-API using Node/JavaScript/Typescript + relevant packages
+
+For testing in our project we use Mocha/Chai. The testing uses before/beforeEach/after/afterEach for setting up a DB or folder/files for testing. IN our project we overwrite the enviroment file and use a test DB instead. MOcking is a important concept. MOck objects are simulated objects that mimic ghe behavior of the "real" object we wanna test. They have the same interface as the real one, allowing client objects to remain unaware of whether it is using a real or mock object. We use expect to test the expected value.
 
 ## Explain a setup for Express/Node/Test/Mongo-DB development with Typescript, and how it handles "secret values", debug and testing.
 
@@ -45,7 +47,11 @@ We use middlewares for loggers.
 
 ## Explain, using relevant examples, your strategy for implementing a REST-API with Node/Express  + TypeScript and demonstrate how you ## have tested the API.
 
+Our project uses express to setup a rest-API using routes for endpoints.
+
 ## Explain, using relevant examples, how to test JavaScript/Typescript Backend Code, relevant packages (Mocha, Chai etc.) and how to test asynchronous code.
+
+duplicate?
 
 ## NoSQL and MongoDB 
 
@@ -63,7 +69,11 @@ await positionCollection.createIndex({ "lastUpdated": 1 }, {expireAfterSeconds: 
 
 ## Explain, using your own code examples, how you have used some of MongoDB's "special" indexes like TTL and 2dsphere and perhaps also ## the Unique Index.
 
+wd use TTL for delete old location data. We use 2dsphere for geospatial queries as it supports geojson objects. see MOngodb atlas collections.
+
 ## Demonstrate, using a REST-API you have designed, how to perform all CRUD operations on a MongoDB
+
+
 
 ## Explain, using a relevant example, a full JavaScript backend including relevant test cases to test the REST-API (not on the ## production ##database)
 
@@ -74,13 +84,24 @@ await positionCollection.createIndex({ "lastUpdated": 1 }, {expireAfterSeconds: 
 
 ## Explain and demonstrate basic Geo-JSON, involving as a minimum, Points and Polygons
 
+$geometry: {
+    type: "Point",
+    coordinates: [lon,lat]
+}
+
+we use points for userlocation and polygons for "proximity". with that we check if user is within or not the proximity.
+
 ## (y) Explain and demonstrate ways to create Geo-JSON test data
 
 ## (y) Explain the typical order of longitude and latitude used by Server-Side API’s and Client-Side API’s
 
+x-y axis rule for remembering when working with the logic, other way around for map software
+
 ## Explain and demonstrate a REST API that implements geo-features, using a relevant geo-library and plain JavaScript
 
 ## Explain and demonstrate a REST API that implements geo-features, using Mongodb’s geospatial queries and indexes.
+
+We use geofeatures with indexes lastupdated and 2dsphere. the lastupdates is TTL which means it will delete itself after a given time(30seconds for us i believe). The 2dsphere index we use for geospatial queries as it supports geojson objects. see MOngodb atlas collections.
 
 ## This will come in period-3
 
