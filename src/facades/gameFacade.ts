@@ -6,8 +6,8 @@ import { ApiError } from "../errors/apiError"
 import UserFacade from "./userFacadeWithDB"
 import IPosition from '../interfaces/Position';
 import IPost from '../interfaces/Post';
-import {positionCreator} from "../utils/geoUtils"
-import {POSITION_COLLECTION_NAME,POST_COLLECTION_NAME} from "../config/collectionNames"
+import { positionCreator } from "../utils/geoUtils"
+import { POSITION_COLLECTION_NAME, POST_COLLECTION_NAME } from "../config/collectionNames"
 
 let positionCollection: mongo.Collection;
 let postCollection: mongo.Collection;
@@ -34,11 +34,11 @@ export default class GameFacade {
       //TODO
       //1) Create expiresAfterSeconds index on lastUpdated
       //2) Create 2dsphere index on location
-      await positionCollection.createIndex({ "lastUpdated": 1 }, {expireAfterSeconds: EXPIRES_AFTER});
-      await positionCollection.createIndex({ location : "2dsphere" })
-      
+      await positionCollection.createIndex({ "lastUpdated": 1 }, { expireAfterSeconds: EXPIRES_AFTER });
+      await positionCollection.createIndex({ location: "2dsphere" })
 
-      
+
+
       //TODO uncomment if you plan to do this part of the exercise
       //postCollection = client.db(dbName).collection(POST_COLLECTION_NAME);
       //TODO If you do this part, create 2dsphere index on location
@@ -59,8 +59,8 @@ export default class GameFacade {
       user = await UserFacade.getUser(userName);
       const loggedIn = await UserFacade.checkUser(userName, password);
       //if(loggedIn) throw new Error();
-    } catch(err){
-       throw new ApiError("wrong username or password",403)
+    } catch (err) {
+      throw new ApiError("wrong username or password", 403)
     }
 
     try {
@@ -74,25 +74,25 @@ export default class GameFacade {
         short time */
       const found = await positionCollection.findOneAndUpdate(
         { userName }, //Add what we are searching for (the userName in a Position Document)
-        { $set: { userName, name:user.name, lastUpdated:date, location:point    } },{
-          upsert:true, returnOriginal:false
-        } // Add what needs to be added here, remember the document might NOT exist yet
+        { $set: { userName, name: user.name, lastUpdated: date, location: point } }, {
+        upsert: true, returnOriginal: false
+      } // Add what needs to be added here, remember the document might NOT exist yet
         //{ upsert: , returnOriginal:  }  // Figure out why you probably need to set both of these
       )
-      
+
 
       /* TODO 
          By know we have updated (or created) the callers position-document
          Next step is to see if we can find any nearby players, friends or whatever you call them
          */
       const nearbyPlayers = await GameFacade.findNearbyPlayers(userName, point, distance);
-      
+
       //If anyone found,  format acording to requirements
       const formatted = nearbyPlayers.map((player) => {
         return {
           userName: player.userName,
-          lat:latitude,
-          lon:longitude
+          lat: latitude,
+          lon: longitude
           // Complete this, using the requirements
         }
       })
@@ -132,12 +132,12 @@ export default class GameFacade {
           _id: postId,
           location:
           {
-            $near:{
+            $near: {
               $geometry: {
                 type: "Point",
-                coordinates: [lon,lat]
+                coordinates: [lon, lat]
+              }
             }
-          }
             // Todo: Complete this
           }
         }
