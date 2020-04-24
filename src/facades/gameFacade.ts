@@ -91,8 +91,8 @@ export default class GameFacade {
       const formatted = nearbyPlayers.map((player) => {
         return {
           userName: player.userName,
-          lat: latitude,
-          lon: longitude
+          lat: player.location.coordinates[1],
+          lon: player.location.coordinates[0]
           // Complete this, using the requirements
         }
       })
